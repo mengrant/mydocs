@@ -8,7 +8,13 @@ table th:first-of-type {
 | 命令 | 说明 |
 | --- | --- |
 |  git init   | 在一个目录中执行，将此目录初始化为git管理仓库 |   
+| git add \<name> | 添加文件到git管理器中 |
+| git commit | 提交到本地库 |
+| git commit -m "blabla..." |提交时添加说明 |
+| git status | 查看当前git工作区状 |
 | git checkout -- readme.txt | 把readme.txt文件在工作区的修改全部撤销，这里有两种情况：一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。总之，就是让这个文件回到最近一次git commit或git add时的状态。|
+| git reset --hard \<commitId> | 回退到指定版本 |
+| git reset HEAD <file> | 把暂存区的修改撤销掉 |
 | git rm \<name> | 从版本库中删除一个文件 ，需要用git commit提交到版本库 |
 | git clone gitsorce | 在当前目录下，获取一分git资源的克 |
 | git remote add origin git@server-name:path/repo-name.git | 关联一个远程库 | 
@@ -45,3 +51,8 @@ table th:first-of-type {
 | git tag -d \<tagname> | 删除一个本地标签 |
 | git push origin :ref/tags/\<tagname> | 删除一个远程标签 |
 | git remote rm origin | 删除与远程库的关联 |
+| git add -f \<name> | 强制添加一个被忽略的文件 |
+| git check-ignore | 检查忽略文件 |
+| git config --global alias.st status   <br/>  git config --global alias.co checkout  <br>git config --global alias.ci commit  <br> git config --global alias.br branch <br> git config --global alias.unstage 'reset HEAD'| 设置git 命令别名|
+| git config --global alias.last 'log -1' | 用git last 显示最后一次提交 |
+| git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" | git lg  显示全部信息 |
