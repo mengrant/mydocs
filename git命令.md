@@ -33,3 +33,15 @@ table th:first-of-type {
 | git remote -v | 查看远程库的详细信息，可能查看fetch和push的地址 |
 | git push origin master| 将本地主库推送到远程库|
 | git push origin dev | 将本地分支库推送到远程库 |
+| git checkout -b dev origin/dev | 创建本地分支并与远程分支关联|
+| git pull | 拉取远程信息到本地   `如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令 git branch --set-upstream branch-name origin/branch-name。` |
+| git tag \<tagname> | 给当前commit打标签 |
+| git tag -a \<tagname> -m "blabla..."  [commitId] |指定标签名称和标签信息 |
+| git tag -s \<tagname> -m "blabla..."  [commitId] |用PGP签名标签 |
+| git tag | 查看所有标签 |
+| git tag -d \<tagname> |删除标签|
+| git push origin \<tagname>| 推送标签到远程库 |
+| git push origin --tags | 推送全部未推送过的本地标签|
+| git tag -d \<tagname> | 删除一个本地标签 |
+| git push origin :ref/tags/\<tagname> | 删除一个远程标签 |
+| git remote rm origin | 删除与远程库的关联 |
