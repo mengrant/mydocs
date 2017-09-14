@@ -1,4 +1,9 @@
 ## Git命令
+<style>
+table th:first-of-type {
+    width: 200px;
+}
+</style>
 
 | 命令 | 说明 |
 | --- | --- |
@@ -15,3 +20,11 @@
 | git checkout \<name> | 切换分支 | 
 | git merge \<name> | 合并指定分支到当前分支 |
 | git branch -d \<name> | 删除指定的分支 |
+| git log --graph | 可以查看分支合并图|
+| git log --graph --pretty=oneline --abbrev-commit | |
+| git merge --no-ff -m "nerge with no fast forward" \<name> | 强制使用no fast forward模式合并项目|
+| git stash | 保存当前的工作内容到工作区 |
+| git stash list | 显示工作区保存的工作内容的列表 |
+| git stash apply | 恢复工作区内容  到工作现场，但是工作区内容不会删除 |
+| git stash drop | 删除工作区内容 |
+| git stash pop | 从工作区恢复内容到工作现场，并删除工作区内容 |
