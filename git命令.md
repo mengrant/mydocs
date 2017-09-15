@@ -37,6 +37,7 @@ table th:first-of-type {
 | git branch -D \<name> | 强行删除一个没有被合并的分支 |
 | git remote | 查看远程库的信息 |
 | git remote -v | 查看远程库的详细信息，可能查看fetch和push的地址 |
+| gir remote rm \<name> | 删除一个远程连接 |
 | git push origin master| 将本地主库推送到远程库|
 | git push origin dev | 将本地分支库推送到远程库 |
 | git checkout -b dev origin/dev | 创建本地分支并与远程分支关联|
